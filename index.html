@@ -11,7 +11,9 @@
 </head>
 <body>
     <div class="container">
+        <div class="weather-app-wrapper">
         <div class ="weather-app">
+            <div class="overview">
     <h1>
         London
     </h1>
@@ -23,13 +25,20 @@
             Clear
         </li>
     </ul>
+    </div>
    <div class= "row">
        <div class = "col-6">
-           <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+           <div class="clearfix weather-temperature">
+           <img 
+           src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
            alt="Clear"
+           class="float-left"
            />
-           12°C |°F
+           <div class="float-left">
+           <strong>12</strong><span class="units">°C | <a href="#">°F</a></span>
+         </div>
        </div>
+    </div>
        <div class="col-6">
            <ul>
                <li>
@@ -44,7 +53,7 @@
            </ul>
        </div>
    </div>
-
+</div>
    <small><a href="https://github.com/blakebdavies/vanilla-weather-app"
     target="_blank"
     >
