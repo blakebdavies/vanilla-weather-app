@@ -29,7 +29,7 @@ return days[day];
 }
 
 function displayForecast(response) {
-let forecast =response.data.daily;
+let forecast = response.data.daily;
 let forecastElement = document.querySelector("#forecast");
 
 let forecastHTML =`<div class="row">`;
@@ -103,15 +103,16 @@ let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${ap
 axios.get(apiUrl).then(displayTemperature);
 }
 
-
 function handleSubmit(event){
     event.preventDefault();
     let cityInputElement = document.querySelector("#city-input");
     search(cityInputElement.value);
 }
 
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
 
 search("London");
 displayForecast();
