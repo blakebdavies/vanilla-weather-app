@@ -8,6 +8,7 @@ function formatDate (timestamp){
     if (minutes< 10){
         minutes = `0${minutes}`;
     }
+
     let days = [
         "Sunday", 
         "Monday", 
@@ -17,6 +18,7 @@ function formatDate (timestamp){
         "Friday", 
         "Saturday"];
     let day = days[date.getDay()];
+
     return `${day} ${hours}:${minutes}`;
 }
 
@@ -29,13 +31,13 @@ return days[day];
 }
 
 function displayForecast(response) {
-    console.log(response);
+
 let forecast = response.data.daily;
 let forecastElement = document.querySelector("#forecast");
 
 let forecastHTML =`<div class="row">`;
 forecast.forEach(function(forecastDay, index) {
-    if (index < 6) {
+    if (index < 6 ){
 
      forecastHTML = forecastHTML + 
     `
